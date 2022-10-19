@@ -1,14 +1,14 @@
 public class SalesManager {
-    protected int [] sales;
-    int max = -1;
+    protected long [] sales;
+    long max = -1;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
     //вычисление максимального значения массива
-    public int max() {
-        for (int sale : sales) {
+    public long max() {
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
