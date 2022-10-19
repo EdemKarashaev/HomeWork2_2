@@ -1,15 +1,14 @@
 public class SalesManager {
-
-    protected int[] sales;
-    int max = -1;
-
-
-    public SalesManager(int[] sales) {
+    protected long [] sales;
+    long max = -1;
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        for (int sale : sales) {
+    //вычисление максимального значения массива
+    public long max() {
+        for (long sale : sales) {
+
             if (sale > max) {
                 max = sale;
             }
@@ -18,10 +17,10 @@ public class SalesManager {
     }
 
     //вычисление суммы средних продаж
-    public int average() {
-        int av = 0;
-        int aver;
-        int min = sales[0];
+    public long average() {
+        long av = 0;
+        long aver;
+        long min = sales[0];
         //вычисление минимального значения массива
         for (int i = 1; i < sales.length; i++) {
             if (sales[i] < min) {
@@ -29,13 +28,13 @@ public class SalesManager {
             }
         }
         //вычисление максимального значения массива
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             av = av + sale;
         }
         aver = (av - min - max) / (sales.length - 2);
